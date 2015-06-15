@@ -70,6 +70,18 @@ app.post('/adjective', function(req, res) {
   res.json({message: "Ya did it!", confirm: req.body.word}) //sending back a json object that has two parts to it.
 })
 
+app.post('/verb', function(req, res) {
+  console.log(req.body.word);
+  verb[req.body.word] = true;
+  res.json({message: "You added a verb!", confirm: req.body.word}) //sending back a json object that has two parts to it.
+})
+
+app.post('/noun', function(req, res) {
+  console.log(req.body.word);
+  noun[req.body.word] = true;
+  res.json({message: "You added a noun!", confirm: req.body.word}) //sending back a json object that has two parts to it.
+})
+
 app.get('/adjective', function(req, res) {
   res.json(getRandomWord(adjective));
 });
