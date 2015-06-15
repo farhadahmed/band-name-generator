@@ -3,6 +3,7 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var getRandomWord = require('./lib/getRandomWord.js');
+var postWord = require('./lib/postWord.js');
 var Adjective = require('./lib/adjective.js');
 var Verb = require('./lib/verb.js');
 var Noun = require('./lib/noun.js');
