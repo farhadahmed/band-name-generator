@@ -2,6 +2,8 @@
 
 var express = require('express');
 var bodyParser = require('body-parser')
+var getRandomWord = require('./lib/getRandomWord.js')
+var Adjective = require('./lib/adjective.js')
 
 var app = express();
 var port = process.env.PORT || 3000;
@@ -10,20 +12,20 @@ app.use(express.static(__dirname + '/app/'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
-var Adjective = function() {
-  this.sleepy = true;
-  this.fuzzy = true;
-  this.cranky = true;
-  this.soporific = true;
-  this.lazy = true;
-  this.penultimate = true;
-  this.geodesic = true;
-  this.superb = true;
-  this.tasty = true;
-  this.intense = true;
-  this.magnificent = true;
-  this.eloquent = true;
-};
+//var Adjective = function() {
+//  this.sleepy = true;
+//  this.fuzzy = true;
+//  this.cranky = true;
+//  this.soporific = true;
+//  this.lazy = true;
+//  this.penultimate = true;
+//  this.geodesic = true;
+//  this.superb = true;
+//  this.tasty = true;
+//  this.intense = true;
+//  this.magnificent = true;
+//  this.eloquent = true;
+//};
 var adjective = new Adjective();
 
 var Verb = function() {
