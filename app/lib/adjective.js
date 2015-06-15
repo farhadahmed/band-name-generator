@@ -13,4 +13,4 @@ var Adjective = function() {
   this.eloquent = true;
 };
 
-module.exports = Adjective //export the constructor function
+module.exports = Adjective; //export the constructor function
