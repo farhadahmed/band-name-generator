@@ -3,10 +3,19 @@
   "version": "0.0.0",
   "repository": {
     "type": "git",
+<<<<<<< HEAD
     "url": "https://github.com/codefellows/band-name-generator"
   },
   "description": "Example Site for JavaScript F2 at Code Fellows",
   "dependencies": {
+=======
+    "url": "https://github.com/stephanielingwood/band-name-generator"
+  },
+  "description": "Example Site for JavaScript F2 at Code Fellows",
+  "dependencies": {
+    "body-parser": "^1.13.0",
+    "express": "^4.12.4"
+>>>>>>> FarhadsBranch
   },
   "devDependencies": {
     "grunt": "^0.4.5",

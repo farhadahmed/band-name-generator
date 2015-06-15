@@ -4,7 +4,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks("grunt-contrib-jshint");
   grunt.loadNpmTasks("grunt-jscs");
 
-  var srcFiles = ["app/**/*.js", "lib/**/*.js", "server.js"];
+  var srcFiles = ["app/**/*.js", "lib/**/*.js", "server.js", "Gruntfile"];
 
   grunt.initConfig({
     jshint: {
@@ -17,7 +17,10 @@ module.exports = function(grunt) {
         undef: true,
         unused: true,
         indent: 2,
-        node: true
+        node: true,
+        globals: {
+          $: false
+        }
       }
     },
     jscs: {
@@ -26,7 +29,8 @@ module.exports = function(grunt) {
         preset: "airbnb",
         requireDotNotation: null,
         disallowMultipleVarDecl: null,
-        requireMultipleVarDecl: null
+        requireMultipleVarDecl: null,
+        validateQuoteMarks: null
       }
     }
   });
