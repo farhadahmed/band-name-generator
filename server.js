@@ -60,6 +60,12 @@ function getRandomWord (object) {
   return {word: randomProp};
 }
 
+app.post('/adjective', function(req, res) {
+  console.log(req.body.word);
+  adjective[req.body.word] = true;
+  res.json({message: "Ya did it!", confirm: req.body.word}) //sending back a json object that has two parts to it.
+})
+
 app.get('/adjective', function(req, res) {
   res.json(getRandomWord(adjective));
 });

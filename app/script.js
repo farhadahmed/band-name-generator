@@ -4,8 +4,9 @@ $(function() {
   $('form').on('submit', function(event) {
     event.preventDefault();
     var userAdjective = $('#user-adjective').val();
-    $.post('/adjective', {word: userAdjective}, function() { //this is json object and a callback function
-      // Get something back, do something with it!
+    $.post('/adjective', {word: userAdjective}, function(response) { //this is json object and a callback function
+      var confirm = response.message + " We saved: <em>" + response.confirm + "</em>";
+      $('#adjective-res').html(confirm);
     })
   })
 
