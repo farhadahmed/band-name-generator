@@ -54,11 +54,11 @@ var Noun = function() {
 };
 var noun = new Noun();
 
-function getRandomWord (object) {
-  var propArray = Object.keys(object);
-  var randomProp = propArray[Math.floor(Math.random() * propArray.length)];
-  return {word: randomProp};
-}
+//function getRandomWord (object) {
+//  var propArray = Object.keys(object);
+//  var randomProp = propArray[Math.floor(Math.random() * propArray.length)];
+//  return {word: randomProp};
+//}
 
 app.post('/adjective', function(req, res) {
   console.log(req.body.word);
