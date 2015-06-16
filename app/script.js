@@ -5,9 +5,25 @@ $(function() {
     event.preventDefault();
     var userAdjective = $('#user-adjective').val();
     $.post('/adjective', {word: userAdjective}, function(response) { //this is json object and a callback function
-      var confirm = response.message + " We saved: <em>" + response.confirm + "</em>";
+      //var confirm = response.message + " We saved: <em>" + response.confirm + "</em>";
+      var confirm = response.message + "<em>" + userAdjective + "</em>";
       $('#adjective-res').html(confirm);
-    })
+    });
+
+    var userVerb = $('#user-verb').val();
+    $.post('/verb', {word: userVerb}, function(response) {
+      //var confirm = response.message + " We saved: <em>" + response.confirm + "</em>";
+      var confirm = response.message + "<em>" + userVerb + "</em>";
+      $('#verb-res').html(confirm);
+    });
+
+    var userNoun = $('#user-noun').val();
+    $.post('/noun', {word: userNoun}, function(response) {
+      //var confirm = response.message + " We saved: <em>" + response.confirm + "</em>";
+      var confirm = response.message + "<em>" + userNoun + "</em>";
+      $('#noun-res').html(confirm);
+    });
+
   })
 
   $("button").click(function() {
