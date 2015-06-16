@@ -23,19 +23,19 @@ app.post('/adjective', function(req, res) {
   console.log(req.body.word);
   adjective[req.body.word] = true;
   res.json(postWord(req.body.adjective, adjective));
-})
+});
 
 app.post('/verb', function(req, res) {
   console.log(req.body.word);
   verb[req.body.word] = true;
   res.json(postWord(req.body.verb, verb));
-})
+});
 
 app.post('/noun', function(req, res) {
   console.log(req.body.word);
   noun[req.body.word] = true;
   res.json(postWord(req.body.noun, noun));
-})
+});
 
 app.get('/adjective', function(req, res) {
   res.json(getRandomWord(adjective));
